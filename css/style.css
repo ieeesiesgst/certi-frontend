@@ -16,6 +16,82 @@ body
 /*Navbar End*/
 
 /*Our Courses*/
+body {
+    background-image: url(C:/Users/hp/Desktop/Certi-Frontend/certi-frontend/Images/Our_courses_bg.svg);
+}
+
+.container {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.row {
+    padding-left: 30px;
+}
+.row-header {
+    padding-bottom: 50px;
+    padding-top: 45px;
+    background-image: url(C:/Users/hp/Desktop/Certi-Frontend/certi-frontend/Images/Our_courses_boxes.svg);
+    background-repeat: no-repeat;
+    padding-left: 35px;
+}
+
+.grid {
+    height: 100%;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    overflow-x: auto;
+}
+
+.grid::-webkit-scrollbar{
+    width: 0;
+}
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 8px;
+    width: 25%;
+    height: 290px;
+    margin: 15px 0 30px;
+    box-shadow: 0 20x 15px 0px rbga(0,0,0,0.2);
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.img {
+    background: navy;
+    height: 90%;
+    width: 84%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack:  ;
+    justify-content: initial;
+    -webkit-box-align: initial;
+    align-items: initial;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.button {
+    color: navy;
+    padding-left: 107px;
+    margin-bottom: 2px;
+}
+
+
 
 
 
