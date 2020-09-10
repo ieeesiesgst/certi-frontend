@@ -204,7 +204,7 @@ body {
 }
 
 .img {
-    background: navy;
+    background: #0D2C54;
     height: 90%;
     width: 84%;
     display: -webkit-box;
@@ -230,7 +230,11 @@ body {
 /*Our Courses End*/
 
 /*Our Mission*/
-
+#our-mission {
+  background-image: url("../images/Our_mission_bg.jpg"); 
+  width:100%; 
+  height:500px;
+}
 
 
 /*Our Mission End*/
