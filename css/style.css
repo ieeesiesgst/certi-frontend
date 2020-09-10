@@ -221,14 +221,6 @@ body
     background: linear-gradient(180deg, #0F3C76 0%, #0B2B55 100%);
 }
 
-.img-mission {
-    background: #0D2C54;
-    width: 100%;
-    margin-bottom: 15px;
-    height: 552px;
-    margin-top: -45px;
-}
-
 .button {
     position: absolute;
     height: 45px;
@@ -279,9 +271,24 @@ body
 
 /*Our Mission*/
 #our-mission {
-  background-image: url("../images/Our_mission_bg.jpg"); 
-  width:100%; 
-  height:500px;
+  background-image: url("../images/Our_mission_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; 
+  width:100%;
+}
+
+.img-mission {
+    background: #0D2C54;
+    width: 80%;
+    font-family: 'Dancing Script', cursive;
+    color: #fdca76;
+    font-size: 24px;
+    transform: scale(1.1);
+}
+
+.mission-para
+{
+  font-size: 19px;
 }
 
 
