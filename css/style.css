@@ -16,55 +16,59 @@ body
 /*Navbar End*/
 
 /*Our Courses*/
-body {
-    background-image: url(C:/Users/hp/Desktop/Certi-Frontend/certi-frontend/Images/Our_courses_bg.svg);
+#our-courses {
+    background-image: url("../Images/Courses_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-top: 70px;
+}
+.vertical-pad {
+    padding-bottom: 35px;
 }
 
-.container {
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
-
-.row {
+.horizontal-pad {
     padding-left: 30px;
 }
-.row-header {
+.heading {
     padding-bottom: 50px;
     padding-top: 45px;
-    background-image: url(C:/Users/hp/Desktop/Certi-Frontend/certi-frontend/Images/Our_courses_boxes.svg);
+    background-image: url("../Images/Our_courses_boxes.svg");
     background-repeat: no-repeat;
     padding-left: 35px;
 }
-
 .grid {
-    height: 100%;
-    display: -webkit-box;
+    min-width: max-content;
+}
+.wrapper {
     display: flex;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
     justify-content: space-between;
     overflow-x: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-
-.grid::-webkit-scrollbar{
+.horizontal-scrollable > .grid { 
+    overflow-x: auto; 
+    white-space: nowrap;
+} 
+.wrapper::-webkit-scrollbar{
     width: 0;
 }
 .card {
     position: relative;
     display: -webkit-box;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    flex-direction: column;
+    flex-direction: row;
     -webkit-box-pack: center;
     justify-content: center;
     -webkit-box-align: center;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 10px;
     width: 25%;
     height: 290px;
     margin: 15px 0 30px;
-    box-shadow: 0 20x 15px 0px rbga(0,0,0,0.2);
+    box-shadow: 0px 4px 4px rgba(0,0, 0, 0.15), 0px 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .card:hover .overlay {
@@ -72,7 +76,6 @@ body {
 }
 
 .img {
-    background: navy;
     height: 90%;
     width: 84%;
     display: -webkit-box;
@@ -81,15 +84,52 @@ body {
     justify-content: initial;
     -webkit-box-align: initial;
     align-items: initial;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 15px;
+    background: linear-gradient(180deg, #0F3C76 0%, #0B2B55 100%);
 }
 
 .button {
-    color: navy;
-    padding-left: 107px;
-    margin-bottom: 2px;
+    position: absolute;
+    height: 45px;
+    color: #FDCA76;
+    background: linear-gradient(180deg, #0F3C76 0%, #0B2B55 100%);
+    font-size: 30px;
+    font-weight: 900;
+    left: 110px;
+    top: 235px;
+    border-radius: 5px 0px 0px 5px;
+    text-align: center;
+    width: 50px;
 }
+.course {
+    padding-right: 140px;
+    text-align:  justify;
+}
+
+@media screen and (min-width: 480px)
+{
+    .button {
+        left: 90px;
+        width: 46px;
+    }
+    .course {
+        padding-right: 53px;
+    }
+}
+@media only screen and (min-width: 768px)
+{
+    .button {
+        left: 184px;
+        width: 73px;
+    }
+    .course {
+        padding-right: 110px;
+    }
+}
+
+
+    
 
 
 
