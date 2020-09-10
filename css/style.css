@@ -217,17 +217,11 @@ body {
     margin-bottom: 15px;
 }
 
-.img1 {
+.img-mission {
     background: #0D2C54;
     width: 100%;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack:  ;
-    justify-content: initial;
-    -webkit-box-align: initial;
-    align-items: initial;
     margin-bottom: 15px;
-    height: 473px;
+    height: 552px;
     margin-top: -45px;
 }
 
