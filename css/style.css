@@ -204,7 +204,7 @@ body {
 }
 
 .img {
-    background: #0D2C54;
+    background: navy;
     height: 90%;
     width: 84%;
     display: -webkit-box;
@@ -215,6 +215,20 @@ body {
     align-items: initial;
     border-radius: 8px;
     margin-bottom: 15px;
+}
+
+.img1 {
+    background: #0D2C54;
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack:  ;
+    justify-content: initial;
+    -webkit-box-align: initial;
+    align-items: initial;
+    margin-bottom: 15px;
+    height: 473px;
+    margin-top: -45px;
 }
 
 .button {
