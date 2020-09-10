@@ -278,7 +278,7 @@ body
 }
 
 .img-mission {
-    background: #0D2C54;
+    background: linear-gradient(180deg, #0F3C76 0%, #0B2B55 100%);
     width: 80%;
     font-family: 'Dancing Script', cursive;
     color: #fdca76;
