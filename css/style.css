@@ -39,15 +39,23 @@ body
       float: none;
       display: block;
       text-align: center;
+      margin: 20px;
     }
+    .topnav.responsive .links li:last-child a{
+      color: #fff;
+      margin: 0;
+    }
+    .topnav.responsive .links li:last-child a:hover{text-decoration: underline #fff;border:none;}
     .topnav .links{width: 100%;}
     .topnav .links a{display: none;}
+    .topnav.responsive .links a:hover{text-decoration: underline #fff;border:none;}
     .topnav .links ul{
       position: fixed;
       background-color: #0D2C54;
       width: 100%;
     }
-    .hero h1{font-size: 32px;}
+    .topnav .links li{display:contents;}
+    .header h1{font-size: 32px;}
     .fa-bars:before{
       position: fixed;
       right: 25px;
@@ -75,39 +83,56 @@ body
   .links li{
     list-style-type: none;
     display: inline;
+    padding: 6px;
   } 
+  .topnav .links a:hover{
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid #fff;
+  }
+  .topnav .links li:last-child a:hover{
+    color: #fff;
+    text-decoration: none;
+    border: none;
+  }
   .logo{
     font-size: 18px;
     font-weight: 600;
   }
-  
+  .links li:last-child{
+    background-color: #FDCA76;
+  }
+  .links li:last-child a{
+    color: #000000;
+    margin: 20px;
+  }
   
   /* HEADER */
   .header{
-    background: #0d2c54;
+    background: url('../images/Hero.jpg'), #0D2C54;
     width: 100%;
     height: auto;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
   }
-  .hero{
+  .header{
     position: relative;
     font-family: 'Open Sans', sans-serif;
     color: #ffffff;
     padding-top: 60px;
   } 
-  .hero h1{
+  .header h1{
     margin:0;
     font-weight: 700;
   }
-  .hero p{
+  .header p{
     font-size: 18px;
     padding-bottom: 10px;
     font-weight: 400;
   }
   /* h4-get started button */
-  .hero h4{color:black;
+  .header h4{color:black;
     font-size: 18px;
     margin: 5px;
     padding: 5px;
@@ -132,18 +157,13 @@ body
   
   @media screen and (max-width: 600px){
     .header{
-      background: #0d2c54;
+      background:url('../images/Mobile_bg.jpg'), #0d2c54;
       width: 100%;
-      height: auto;
-      min-height: 100vh;
+      height: 100vh;
       background-size: cover;
-      background-attachment: fixed;
       background-position: center;
     }
   }
-  
-
-
 /*Navbar End*/
 
 /*Our Courses*/
