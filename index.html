@@ -42,6 +42,17 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+    textarea {
+  	width: 100%;
+  	font-size: 16px;
+  	padding: 12px 20px;
+  	box-sizing: border-box;
+  	border-radius: 4px;
+  	resize: none;
+  	
+}
+	</style>
 
     <!-- Bootstrap -->
     <!-- CSS only -->
@@ -65,6 +76,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    
 
 </head>
 <body>
@@ -159,6 +171,33 @@
             </div>
             
         </div>
+    </div>
+
+    <div id="form">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-lg-4"></div>
+    			<div class="col-lg-8">
+
+    				<form action="" style="margin-top: 67px;">
+    					<h1 class="pt-3">Contact Us</h1>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Name">
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Email">
+
+    <label for="institution">Institution</label>
+    <input type="text" id="institution" name="institution" placeholder="Institution">
+
+    <label for="suggestion">Suggestion</label>
+    <textarea style="font-size:16px" id="suggestion" name="suggestion" placeholder="Suggestion"></textarea>
+  
+    <center><input type="submit" value="Submit"></center>
+  </form>
+    			</div>
+    		</div>
+    	</div>
     </div>
 
 </body>
