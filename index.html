@@ -81,21 +81,37 @@
 </head>
 <body>
 
-	<nav class="mynavbar">
-        <div class = "topnav" id = "mytopnav">
-          <a href = "#" class = "logo"><img src="./images/IEEE_logo.svg" alt="Logo"></a>
-          <a href = "javascript:void(0);" class = "icon" onclick = "menu()"><i class = "fa fa-bars"></i></a>
-          <div class="links"> 
-            <ul>
-              <li><a href = "#" class = "active">Home</a></li>
-              <li><a href = "#" >About</a></li>
-              <li><a href = "#" >Courses</a></li>
-              <li><a href = "#" >Login</a></li>
-              <li><a href = "#" >Register</a></li>
+	
+    <nav class="position-fixed topnav" id="navbar">
+
+            <div class="nav-logo position-absolute">
+                <img src="images/IEEE_logo.svg" class="nav-logo-img" alt="">
+            </div>
+
+            <div class="toggle-bars position-absolute" onclick="menu();">
+                <div class="bar-1 bar" id="bar1"></div>
+                <div class="bar-2 bar" id="bar2"></div>
+                <div class="bar-3 bar" id="bar3"></div>
+            </div>
+
+            <ul class="navbar-ul">
+                <a href="#" class="navbar-link">
+                    <li class="navbar-list">Link1</li>
+                </a>
+                <a href="#" class="navbar-link">
+                    <li class="navbar-list">Link2</li>
+                </a>
+                <a href="#" class="navbar-link">
+                    <li class="navbar-list">Link3</li>
+                </a>
+                <a href="#" class="navbar-link">
+                    <li class="navbar-list">Link4</li>
+                </a>
             </ul>
-        </div>
-        </div>
-      </nav>
+
+    </nav>
+
+
     <!--Header-->
     <div class="header">
         <div class="container">
@@ -198,15 +214,47 @@
     	</div>
     </div>
 
-</body>
-</html>
+
 <script>
 function menu(){
-    var x = document.getElementById("mytopnav");
-    if(x.className == "topnav"){
-        x.className += " responsive";
-    }else{
-        x.className = "topnav";
+
+    let x = document.getElementById("navbar");
+
+    if(x.style.maxHeight == '60px' || x.style.maxHeight == ''){
+        x.style.maxHeight = " 1000px";
+        document.getElementById('bar1').style.transform = 'rotate(-45deg) translate(-3px,7px)';
+        document.getElementById('bar3').style.transform = 'rotate(45deg) translate(-3px,-7px)';
+        document.getElementById('bar2').style.opacity = '0';
+    }
+    else
+    {
+        x.style.maxHeight = "60px";
+        document.getElementById('bar1').style.transform = 'rotate(0deg) translate(0px,0px)';
+        document.getElementById('bar3').style.transform = 'rotate(0deg) translate(0px,0px)';
+        document.getElementById('bar2').style.opacity = '1';
     }
 }
+
+window.onresize = function() {
+    let x = document.getElementById("navbar");
+    if(window.innerWidth > 600)
+    {
+        x.style.maxHeight = "70px";
+        document.getElementById('bar1').style.transform = 'rotate(0deg) translate(0px,0px)';
+        document.getElementById('bar3').style.transform = 'rotate(0deg) translate(0px,0px)';
+        document.getElementById('bar2').style.opacity = '1';
+    }
+    else
+    {
+        x.style.maxHeight = "60px";
+        document.getElementById('bar1').style.transform = 'rotate(0deg) translate(0px,0px)';
+        document.getElementById('bar3').style.transform = 'rotate(0deg) translate(0px,0px)';
+        document.getElementById('bar2').style.opacity = '1';
+    }
+};
+
+
 </script>
+
+</body>
+</html>
