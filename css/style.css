@@ -11,14 +11,16 @@ body
 
 /*Navbar*/
   .topnav {
-    max-height: 70px;
+    height: 83px;
     top: 0;
     left: 0;
     background: #0D2C54;
     width: 100%;
     z-index: 1000;
     overflow: hidden;
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
   }
 
   .nav-logo {
@@ -27,8 +29,9 @@ body
 
   .nav-logo-img {
     height: 50px;
-    margin-top: 10px;
+    margin-top: 22px;
     width: auto;
+    transition: 0.5s ease-in-out;
   }
 
   .toggle-bars {
@@ -43,7 +46,7 @@ body
     margin: 5px 0;
     width: 100%;
     background: #fff;
-    transition: 1s;
+    transition: 0.7s;
   }
 
   .navbar-ul {
@@ -51,14 +54,14 @@ body
     list-style: none;
     float: right;
     margin-right: 8%;
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-top: 29px;
+    transition: 0.5s ease-in-out;
   }
 
   .navbar-link {
     display: inline-block;
-    padding: 0 10px;
+    padding: 2px 12px;
     color: #fff;
   }
 
@@ -66,25 +69,26 @@ body
   {
     background: #fdca76;
     color: #0D2C54;
-    border-radius: 5px;
-    margin-left: 5px;
+    margin-left: 6px;
+    padding: 2px 20px;
   }
 
   .navbar-link:hover {
-    display: inline-block;
-    padding: 0 10px;
     color: #fff;
     text-decoration: none;
   }
 
-  @media (max-width: 680px)
+  @media (max-width: 850px)
   {
     .topnav {
+      height: auto;
       max-height: 60px;
+      transition: 1s ease-in;
     }
 
     .nav-logo-img {
-      margin-top: 5px;
+      margin-top: 10px;
+      height: 40px;
     }
 
     .toggle-bars {
@@ -102,10 +106,12 @@ body
 
     .navbar-link {
       display: block;
+      margin: 5px 0;
     }
 
     #reg-link
     {
+      margin: 6px 0 10px;
       margin-left: 0;
     }
   }
@@ -116,14 +122,12 @@ body
     width: 100%;
     height: auto;
     background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-  }
-  .header{
+    background-position: center 80%;
+    background-repeat: no-repeat;
     position: relative;
     font-family: 'Open Sans', sans-serif;
     color: #ffffff;
-    padding-top: 60px;
+    padding-top: 90px;
   } 
   .header h1{
     margin:0;
@@ -156,17 +160,51 @@ body
     border: none;
     border-radius: 0 5px 5px 0;
   }
-  
-  
-  @media screen and (max-width: 600px){
+
+
+  @media screen and (max-width: 991px){
     .header{
-      background:url('../images/Mobile_bg.jpg'), #0d2c54;
-      width: 100%;
-      height: 100vh;
-      background-size: cover;
       background-position: center;
     }
   }
+
+  @media screen and (max-width: 850px){
+    .header{
+      padding-top: 70px;
+    }
+  }
+  
+  @media screen and (max-width: 560px){
+    .header{
+      background-position: 100%;
+    }
+  }
+
+  @media screen and (max-width: 510px){
+    .header{
+      background-position: 76%;
+    }
+  }
+
+  @media screen and (max-width: 415px){
+    .header{
+      background-position: 73%;
+    }
+  }
+
+  @media screen and (max-width: 383px){
+    .header{
+      background-position: 70%;
+    }
+  }
+
+  @media screen and (max-width: 353px){
+    .header{
+      background-position: 60%;
+    }
+  }
+
+
 /*Navbar End*/
 
 /*Our Courses*/

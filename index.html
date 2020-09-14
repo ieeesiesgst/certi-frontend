@@ -85,7 +85,7 @@
     <nav class="position-fixed topnav" id="navbar">
 
             <div class="nav-logo position-absolute">
-                <a href="#"><img src="images/IEEE_logo.svg" class="nav-logo-img" alt=""></a>
+                <a href="#"><img src="images/IEEE SIESGST_Certificate Logo Vector.png" class="nav-logo-img" id="nav-logo-image" alt=""></a>
             </div>
 
             <div class="toggle-bars position-absolute" onclick="menu();">
@@ -94,7 +94,7 @@
                 <div class="bar-3 bar" id="bar3"></div>
             </div>
 
-            <ul class="navbar-ul">
+            <ul class="navbar-ul mb-0" id="navbar-ul">
                 <a href="#" class="navbar-link">
                     <li class="navbar-list">Home</li>
                 </a>
@@ -127,6 +127,8 @@
         </div>
     </div>
     <!--Header Ends-->
+
+
 	<div id="our-courses" class="pb-5">
         <div class="container">
             <div class="row">
@@ -223,11 +225,15 @@ function menu(){
 
     let x = document.getElementById("navbar");
 
-    if(x.style.maxHeight == '60px' || x.style.maxHeight == ''){
+    if(x.style.maxHeight == '60px' || x.style.maxHeight == '' || x.style.height == '60px'){
         x.style.maxHeight = " 1000px";
         document.getElementById('bar1').style.transform = 'rotate(-45deg) translate(-3px,7px)';
         document.getElementById('bar3').style.transform = 'rotate(45deg) translate(-3px,-7px)';
         document.getElementById('bar2').style.opacity = '0';
+        setTimeout(function() {
+            x.style.transition = '';
+            x.style.transition = '0.5s cubic-bezier(0, 1, 0, 1)';
+        }, 500);
     }
     else
     {
@@ -235,14 +241,45 @@ function menu(){
         document.getElementById('bar1').style.transform = 'rotate(0deg) translate(0px,0px)';
         document.getElementById('bar3').style.transform = 'rotate(0deg) translate(0px,0px)';
         document.getElementById('bar2').style.opacity = '1';
+        setTimeout(function() {
+            x.style.transition = '';
+            x.style.transition = '1s ease-in;';
+        }, 500);
+    }
+}
+
+function navchange() {
+    if(window.innerWidth > 850 && window.scrollY > 2)
+    {
+        document.getElementById('nav-logo-image').style.marginTop = '13px';
+        document.getElementById('nav-logo-image').style.height = '44px';
+        document.getElementById('navbar-ul').style.marginTop = '20px';
+        document.getElementById('navbar').style.height = '70px';
+    }
+
+    else if(window.innerWidth > 850 && window.scrollY <= 2)
+    {
+        document.getElementById('nav-logo-image').style.marginTop = '22px';
+        document.getElementById('nav-logo-image').style.height = '50px';
+        document.getElementById('navbar-ul').style.marginTop = '29px';
+        document.getElementById('navbar').style.height = '83px';
+    }
+
+    else
+    {
+        document.getElementById('nav-logo-image').style.marginTop = '10px';
+        document.getElementById('nav-logo-image').style.height = '40px';
+        document.getElementById('navbar-ul').style.marginTop = '60px';
+        document.getElementById('navbar').style.height = 'auto';
     }
 }
 
 window.onresize = function() {
     let x = document.getElementById("navbar");
-    if(window.innerWidth > 680)
+    navchange();
+    if(window.innerWidth > 850)
     {
-        x.style.maxHeight = "70px";
+        x.style.maxHeight = "1000px";
         document.getElementById('bar1').style.transform = 'rotate(0deg) translate(0px,0px)';
         document.getElementById('bar3').style.transform = 'rotate(0deg) translate(0px,0px)';
         document.getElementById('bar2').style.opacity = '1';
@@ -255,6 +292,10 @@ window.onresize = function() {
         document.getElementById('bar2').style.opacity = '1';
     }
 };
+
+window.onscroll = function() {
+    navchange();
+}
 
 
 </script>
