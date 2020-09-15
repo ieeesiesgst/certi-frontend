@@ -180,6 +180,19 @@ body
     {
       margin: 6px 0 10px;
       margin-left: 0;
+      color: #fff;
+      background: #0D2C54;
+    }
+
+    .navbar-list
+    {
+      padding: 5px;
+    }
+
+    #reg-list
+    {
+      background: #fdca76;
+      color: #0D2C54;
     }
   }
   
