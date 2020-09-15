@@ -77,6 +77,19 @@ body
     position: relative;
   }
 
+  #reg-link
+  {
+    background: #fdca76;
+    color: #0D2C54;
+    margin-left: 6px;
+    padding: 2px 20px;
+  }
+
+  .navbar-link:hover, .navbar-link:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+
   .navbar-list .navbar-link-text:after
   {
     content: '';
@@ -130,19 +143,6 @@ body
     transform-origin: right;
     transform: scaleX(0);
     transition: transform 0.5s;
-  }
-
-  #reg-link
-  {
-    background: #fdca76;
-    color: #0D2C54;
-    margin-left: 6px;
-    padding: 2px 20px;
-  }
-
-  .navbar-link:hover {
-    color: #fff;
-    text-decoration: none;
   }
 
   @media (max-width: 850px)
