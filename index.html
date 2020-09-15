@@ -81,21 +81,40 @@
 </head>
 <body>
 
-	<nav class="mynavbar">
-        <div class = "topnav" id = "mytopnav">
-          <a href = "#" class = "logo"><img src="./images/IEEE_logo.svg" alt="Logo"></a>
-          <a href = "javascript:void(0);" class = "icon" onclick = "menu()"><i class = "fa fa-bars"></i></a>
-          <div class="links"> 
-            <ul>
-              <li><a href = "#" class = "active">Home</a></li>
-              <li><a href = "#" >About</a></li>
-              <li><a href = "#" >Courses</a></li>
-              <li><a href = "#" >Login</a></li>
-              <li><a href = "#" >Register</a></li>
-            </ul>
+	
+    <nav class="position-fixed topnav" id="navbar">
+
+        <div class="nav-logo position-absolute">
+            <a href="#"><img src="images/IEEE SIESGST_Certificate Logo Vector.png" class="nav-logo-img" id="nav-logo-image" alt=""></a>
         </div>
+
+        <div class="toggle-bars position-absolute" onclick="menu();">
+            <div class="bar-1 bar" id="bar1"></div>
+            <div class="bar-2 bar" id="bar2"></div>
+            <div class="bar-3 bar" id="bar3"></div>
         </div>
-      </nav>
+
+        <ul class="navbar-ul mb-0" id="navbar-ul">
+            <a href="#" class="navbar-link">
+                <li class="navbar-list active"><div class="navbar-link-text d-inline">Home</div></li>
+            </a>
+            <a href="#" class="navbar-link">
+                <li class="navbar-list"><div class="navbar-link-text d-inline">About Us</div></li>
+            </a>
+            <a href="#" class="navbar-link">
+                <li class="navbar-list"><div class="navbar-link-text d-inline">Courses</div></li>
+            </a>
+            <a href="#" class="navbar-link">
+                <li class="navbar-list"><div class="navbar-link-text d-inline">Login</div></li>
+            </a>
+            <a href="#" class="navbar-link" id="reg-link">
+                <li class="navbar-list" id="reg-list"><div class="navbar-link-text d-inline">Register</div></li>
+            </a>
+        </ul>
+
+    </nav>
+
+
     <!--Header-->
     <div class="header">
         <div class="container">
@@ -108,6 +127,8 @@
         </div>
     </div>
     <!--Header Ends-->
+
+
 	<div id="our-courses" class="pb-5">
         <div class="container">
             <div class="row">
@@ -198,15 +219,86 @@
     	</div>
     </div>
 
-</body>
-</html>
+
 <script>
 function menu(){
-    var x = document.getElementById("mytopnav");
-    if(x.className == "topnav"){
-        x.className += " responsive";
-    }else{
-        x.className = "topnav";
+
+    let x = document.getElementById("navbar");
+
+    if(x.style.maxHeight == '60px' || x.style.maxHeight == '' || x.style.height == '60px'){
+        x.style.maxHeight = " 1000px";
+        document.getElementById('bar1').style.transform = 'rotate(-45deg) translate(-3px,7px)';
+        document.getElementById('bar3').style.transform = 'rotate(45deg) translate(-3px,-7px)';
+        document.getElementById('bar2').style.opacity = '0';
+        setTimeout(function() {
+            x.style.transition = '';
+            x.style.transition = '0.5s cubic-bezier(0, 1, 0, 1)';
+        }, 500);
+    }
+    else
+    {
+        x.style.maxHeight = "60px";
+        document.getElementById('bar1').style.transform = 'rotate(0deg) translate(0px,0px)';
+        document.getElementById('bar3').style.transform = 'rotate(0deg) translate(0px,0px)';
+        document.getElementById('bar2').style.opacity = '1';
+        setTimeout(function() {
+            x.style.transition = '';
+            x.style.transition = '1s ease-in;';
+        }, 500);
     }
 }
+
+function navchange() {
+    if(window.innerWidth > 850 && window.scrollY > 2)
+    {
+        document.getElementById('nav-logo-image').style.marginTop = '13px';
+        document.getElementById('nav-logo-image').style.height = '44px';
+        document.getElementById('navbar-ul').style.marginTop = '20px';
+        document.getElementById('navbar').style.height = '70px';
+    }
+
+    else if(window.innerWidth > 850 && window.scrollY <= 2)
+    {
+        document.getElementById('nav-logo-image').style.marginTop = '22px';
+        document.getElementById('nav-logo-image').style.height = '50px';
+        document.getElementById('navbar-ul').style.marginTop = '29px';
+        document.getElementById('navbar').style.height = '83px';
+    }
+
+    else
+    {
+        document.getElementById('nav-logo-image').style.marginTop = '10px';
+        document.getElementById('nav-logo-image').style.height = '40px';
+        document.getElementById('navbar-ul').style.marginTop = '60px';
+        document.getElementById('navbar').style.height = 'auto';
+    }
+}
+
+window.onresize = function() {
+    let x = document.getElementById("navbar");
+    navchange();
+    if(window.innerWidth > 850)
+    {
+        x.style.maxHeight = "1000px";
+        document.getElementById('bar1').style.transform = 'rotate(0deg) translate(0px,0px)';
+        document.getElementById('bar3').style.transform = 'rotate(0deg) translate(0px,0px)';
+        document.getElementById('bar2').style.opacity = '1';
+    }
+    else
+    {
+        x.style.maxHeight = "60px";
+        document.getElementById('bar1').style.transform = 'rotate(0deg) translate(0px,0px)';
+        document.getElementById('bar3').style.transform = 'rotate(0deg) translate(0px,0px)';
+        document.getElementById('bar2').style.opacity = '1';
+    }
+};
+
+window.onscroll = function() {
+    navchange();
+}
+
+
 </script>
+
+</body>
+</html>

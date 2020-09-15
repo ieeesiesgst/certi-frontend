@@ -10,101 +10,190 @@ body
 }
 
 /*Navbar*/
-  .mynavbar{position: sticky; z-index: 100;}
-  .topnav{
-    position: fixed;
+  .topnav {
+    height: 83px;
+    top: 0;
+    left: 0;
+    background: #0D2C54;
     width: 100%;
-    background-color: #0D2C54;
-  }
-  .topnav .icon{
-    display: none;
     z-index: 1000;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
   }
-  .logo img{
-    margin:22px 0 0 22px;
-    height:42px;
+
+  .nav-logo {
+    left: 8%;
   }
-    
-  @media screen and (max-width: 600px){
-    .topnav{background-color: #0D2C54;}
-    .topnav a.icon{display: block;float: right;}
-    .topnav.responsive {position: fixed;}
-    .topnav.responsive ul{margin:0; height: 650px;}
-    .topnav.responsive .icon{
-      position: absolute;
-      right:0;
-      top: 0;
-    }
-    .topnav.responsive .links a{
-      float: none;
-      display: block;
-      text-align: center;
-      margin: 20px;
-    }
-    .topnav.responsive .links li:last-child a{
-      color: #fff;
-      margin: 0;
-    }
-    .topnav.responsive .links li:last-child a:hover{text-decoration: underline #fff;border:none;}
-    .topnav .links{width: 100%;}
-    .topnav .links a{display: none;}
-    .topnav.responsive .links a:hover{text-decoration: underline #fff;border:none;}
-    .topnav .links ul{
-      position: fixed;
-      background-color: #0D2C54;
-      width: 100%;
-    }
-    .topnav .links li{display:contents;}
-    .header h1{font-size: 32px;}
-    .fa-bars:before{
-      position: fixed;
-      right: 25px;
-      top: 15px;
-      font-size: 24px;
-    }   
+
+  .nav-logo-img {
+    height: 50px;
+    margin-top: 22px;
+    width: auto;
+    transition: 0.5s ease-in-out;
   }
-  .topnav a{
-    display: inline;
-    font-family: Poppins;
-    line-height: 54px;
-    margin-right: 10px;
+
+  .toggle-bars {
+    width: 25px;
+    right: 8%;
+    margin-top: 22px;
+    display: none;
+  }
+
+  .bar {
+    height: 2px;
+    margin: 5px 0;
+    width: 100%;
+    background: #fff;
+    transition: 0.7s;
+  }
+
+  .navbar-ul {
     text-decoration: none;
-    color: #FFFFFF;
-  }
-  .links{
+    list-style: none;
     float: right;
+    margin-right: 8%;
     font-size: 18px;
-    margin-right: 30px;
+    margin-top: 29px;
+    transition: 0.5s ease-in-out;
   }
-  .links ul{
-    float: none;
-    margin:20px;
-  }
-  .links li{
-    list-style-type: none;
-    display: inline;
-    padding: 6px;
-  } 
-  .topnav .links a:hover{
+
+  .navbar-link {
+    display: inline-block;
+    padding: 2px 12px;
     color: #fff;
     text-decoration: none;
-    border-bottom: 2px solid #fff;
+    position: relative;
   }
-  .topnav .links li:last-child a:hover{
+
+  .navbar-list
+  {
+    position: relative;
+  }
+
+  .navbar-link-text
+  {
+    position: relative;
+  }
+
+  .navbar-list .navbar-link-text:after
+  {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 70%;
+    background: #fdca76;
+    left: 15%;
+    bottom: -4px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+  }
+
+  .navbar-list.active .navbar-link-text:after
+  {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 70%;
+    background: #fdca76;
+    left: 15%;
+    bottom: -4px;
+    transform-origin: right;
+    transform: scaleX(1);
+    transition: 0.5s;
+  }
+
+  .navbar-link:hover .navbar-list .navbar-link-text:after
+  {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 70%;
+    background: #fdca76;
+    left: 15%;
+    bottom: -4px;
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  #reg-link:hover .navbar-list .navbar-link-text:after
+  {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 70%;
+    background: #fdca76;
+    left: 15%;
+    bottom: -4px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+  }
+
+  #reg-link
+  {
+    background: #fdca76;
+    color: #0D2C54;
+    margin-left: 6px;
+    padding: 2px 20px;
+  }
+
+  .navbar-link:hover {
     color: #fff;
     text-decoration: none;
-    border: none;
   }
-  .logo{
-    font-size: 18px;
-    font-weight: 600;
-  }
-  .links li:last-child{
-    background-color: #FDCA76;
-  }
-  .links li:last-child a{
-    color: #000000;
-    margin: 20px;
+
+  @media (max-width: 850px)
+  {
+    .topnav {
+      height: auto;
+      max-height: 60px;
+      transition: 1s ease-in;
+    }
+
+    .nav-logo-img {
+      margin-top: 10px;
+      height: 40px;
+    }
+
+    .toggle-bars {
+      margin-top: 17px;
+      display: block;
+      cursor: pointer;
+    }
+
+    .navbar-ul {
+      width: 100%;
+      margin: 60px 0 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .navbar-link {
+      display: block;
+      margin: 5px 0;
+    }
+
+    #reg-link
+    {
+      margin: 6px 0 10px;
+      margin-left: 0;
+      color: #fff;
+      background: #0D2C54;
+    }
+
+    .navbar-list
+    {
+      padding: 5px;
+    }
+
+    #reg-list
+    {
+      background: #fdca76;
+      color: #0D2C54;
+    }
   }
   
   /* HEADER */
@@ -113,14 +202,12 @@ body
     width: 100%;
     height: auto;
     background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-  }
-  .header{
+    background-position: center 80%;
+    background-repeat: no-repeat;
     position: relative;
     font-family: 'Open Sans', sans-serif;
     color: #ffffff;
-    padding-top: 60px;
+    padding-top: 90px;
   } 
   .header h1{
     margin:0;
@@ -153,17 +240,51 @@ body
     border: none;
     border-radius: 0 5px 5px 0;
   }
-  
-  
-  @media screen and (max-width: 600px){
+
+
+  @media screen and (max-width: 991px){
     .header{
-      background:url('../images/Mobile_bg.jpg'), #0d2c54;
-      width: 100%;
-      height: 100vh;
-      background-size: cover;
       background-position: center;
     }
   }
+
+  @media screen and (max-width: 850px){
+    .header{
+      padding-top: 70px;
+    }
+  }
+  
+  @media screen and (max-width: 560px){
+    .header{
+      background-position: 100%;
+    }
+  }
+
+  @media screen and (max-width: 510px){
+    .header{
+      background-position: 76%;
+    }
+  }
+
+  @media screen and (max-width: 415px){
+    .header{
+      background-position: 73%;
+    }
+  }
+
+  @media screen and (max-width: 383px){
+    .header{
+      background-position: 70%;
+    }
+  }
+
+  @media screen and (max-width: 353px){
+    .header{
+      background-position: 60%;
+    }
+  }
+
+
 /*Navbar End*/
 
 /*Our Courses*/
