@@ -289,25 +289,26 @@ body
 /*Our Courses End*/
 
 /*Our Mission*/
-#our-mission {
-  background-image: url("../images/Our_mission_bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; 
-  width:100%;
-}
 
-.img-mission {
-    background: linear-gradient(180deg, #0F3C76 0%, #0B2B55 100%);
-    width: 80%;
-    font-family: 'Dancing Script', cursive;
-    color: #fdca76;
-    font-size: 24px;
-    transform: scale(1.1);
+#our-mission {
+  background-color:#0B2B55;
+  background-size: cover;
+  width:100%;
 }
 
 .mission-para
 {
   font-size: 19px;
+  color: #fff;
+}
+h1{
+  text-align: center;
+    color: #fff;
+    margin-bottom: -17px;
+}
+hr{
+  width: 107px;
+    background: #FDCA76;
 }
 
 
