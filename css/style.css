@@ -319,11 +319,11 @@ h1{
 /*Form*/
 #form {
   width:100%;
-  /*background-image: url("../Images/Contact_bg.jpg");
-  background-repeat: no-repeat;*/
-  background-image: url("../Images/Contact_bg.jpg"), url("../Images/Our_courses_boxes.svg");
+  background-image: url("../Images/Contact_bg.jpg");
+  background-repeat: no-repeat;
+  /*background-image: url("../Images/Contact_bg.jpg"), url("../Images/Our_courses_boxes.svg");
   background-position: left top,right top;
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat, no-repeat;*/
 }
 
 form{
