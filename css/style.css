@@ -447,7 +447,7 @@ body
 /*Form*/
 #home-form {
   width:100%;
-  background-image: url("../Images/Contact_bg.jpg");
+  background-image: url("../images/Contact_bg.jpg");
   background-repeat: no-repeat;
   /*background-image: url("../Images/Contact_bg.jpg"), url("../Images/Our_courses_boxes.svg");
   background-position: left top,right top;
