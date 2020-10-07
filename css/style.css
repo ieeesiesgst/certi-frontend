@@ -317,7 +317,7 @@ h1{
 /*Our Mission End*/
 
 /*Form*/
-#form {
+#home-form {
   width:100%;
   background-image: url("../Images/Contact_bg.jpg");
   background-repeat: no-repeat;
@@ -378,7 +378,7 @@ label {
   font-size: 16px;
 }
 
-.pt-3 {
+.head-con {
   text-align: right;
   padding-bottom:10px;
   color: #000;
