@@ -27,6 +27,12 @@ body
     left: 8%;
   }
 
+  .nav-logo a:focus
+  {
+    outline: none;
+    border: none;
+  }
+
   .nav-logo-img {
     height: 50px;
     margin-top: 22px;
