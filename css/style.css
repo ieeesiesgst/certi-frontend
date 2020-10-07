@@ -279,18 +279,16 @@ body
     }
 }
 
-
-    
-
-
-
-
-
 /*Our Courses End*/
+
+
+
+
+
 
 /*Our Mission*/
 
-#our-mission {
+#home-our-mission {
   background-color:#0B2B55;
   background-size: cover;
   width:100%;
@@ -301,7 +299,7 @@ body
   font-size: 19px;
   color: #fff;
 }
-h1{
+.heading-h1{
   text-align: center;
     color: #fff;
     margin-bottom: -17px;
@@ -309,7 +307,7 @@ h1{
 
 .hr-p{
   height: 3px;
-  margin-top: -13px;
+  margin-top: 18px;
   width: 107px;
     background: #FDCA76;
 }
@@ -326,25 +324,21 @@ h1{
   background-repeat: no-repeat, no-repeat;*/
 }
 
-form{
+.f1{
   margin-top: 67px;
 }
 
-.t1{
+.suggest-txt{
   font-size:16px;
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
+  border: 1px solid #ccc;
 }
 
-textarea {
-    width: 100%;
-    font-size: 16px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    resize: none;
-    
-}
-
-input[type=text]{
+.home-form-input-t{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -355,8 +349,8 @@ input[type=text]{
   font-size: 16px;
 }
 
-input[type=submit] {
-  width: 27%;
+.home-form-input-s{
+ width: 27%;
   background-color: #0F3C76;
   color: white;
   padding: 14px 20px;
@@ -364,17 +358,6 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
-}
-textarea {
-    width: 100%;
-    font-size: 16px;
-    padding: 12px 20px;
-    resize: none;
-    border: 1px solid #ccc;
-}
-
-label {
   font-size: 16px;
 }
 
