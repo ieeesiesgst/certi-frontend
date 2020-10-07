@@ -306,17 +306,42 @@ h1{
     color: #fff;
     margin-bottom: -17px;
 }
-hr{
+
+.hr-p{
+  height: 3px;
+  margin-top: -13px;
   width: 107px;
     background: #FDCA76;
 }
-
 
 /*Our Mission End*/
 
 /*Form*/
 #form {
   width:100%;
+  /*background-image: url("../Images/Contact_bg.jpg");
+  background-repeat: no-repeat;*/
+  background-image: url("../Images/Contact_bg.jpg"), url("../Images/Our_courses_boxes.svg");
+  background-position: left top,right top;
+  background-repeat: no-repeat, no-repeat;
+}
+
+form{
+  margin-top: 67px;
+}
+
+.t1{
+  font-size:16px;
+}
+
+textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+    
 }
 
 input[type=text]{
@@ -356,5 +381,7 @@ label {
 .pt-3 {
   text-align: right;
   padding-bottom:10px;
+  color: #000;
 }
 /*Form End*/
+
