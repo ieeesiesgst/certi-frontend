@@ -299,6 +299,15 @@ body
   font-size: 19px;
   color: #fff;
 }
+
+@media(max-width: 767px)
+{
+  .mission-para
+  {
+    font-size: 16px;
+  }
+}
+
 .heading-h1{
   text-align: center;
     color: #fff;
