@@ -57,6 +57,64 @@
     <link rel="shortcut icon" href="images/favicon.png">
     <link rel="icon" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+
+    <script type="text/javascript">
+        
+        function menu(){
+
+            let x = document.getElementById("navbar");
+
+            if(x.style.maxHeight == '60px' || x.style.maxHeight == '' || x.style.height == '60px'){
+                x.style.maxHeight = " 1000px";
+                document.getElementById('bar1').style.transform = 'rotate(-45deg) translate(-3px,7px)';
+                document.getElementById('bar3').style.transform = 'rotate(45deg) translate(-3px,-7px)';
+                document.getElementById('bar2').style.opacity = '0';
+                setTimeout(function() {
+                    x.style.transition = '';
+                    x.style.transition = '0.5s cubic-bezier(0, 1, 0, 1)';
+                }, 500);
+            }
+            else
+            {
+                x.style.maxHeight = "60px";
+                document.getElementById('bar1').style.transform = 'rotate(0deg) translate(0px,0px)';
+                document.getElementById('bar3').style.transform = 'rotate(0deg) translate(0px,0px)';
+                document.getElementById('bar2').style.opacity = '1';
+                setTimeout(function() {
+                    x.style.transition = '';
+                    x.style.transition = '1s ease-in;';
+                }, 500);
+            }
+        }
+
+        function navchange() {
+            if(window.innerWidth > 850 && window.scrollY > 2)
+            {
+                document.getElementById('nav-logo-image').style.marginTop = '13px';
+                document.getElementById('nav-logo-image').style.height = '44px';
+                document.getElementById('navbar-ul').style.marginTop = '20px';
+                document.getElementById('navbar').style.height = '70px';
+            }
+
+            else if(window.innerWidth > 850 && window.scrollY <= 2)
+            {
+                document.getElementById('nav-logo-image').style.marginTop = '22px';
+                document.getElementById('nav-logo-image').style.height = '50px';
+                document.getElementById('navbar-ul').style.marginTop = '29px';
+                document.getElementById('navbar').style.height = '83px';
+            }
+
+            else
+            {
+                document.getElementById('nav-logo-image').style.marginTop = '10px';
+                document.getElementById('nav-logo-image').style.height = '40px';
+                document.getElementById('navbar-ul').style.marginTop = '60px';
+                document.getElementById('navbar').style.height = 'auto';
+            }
+        }
+
+    </script>
     
 
 </head>
@@ -200,58 +258,6 @@
 
 
 <script>
-function menu(){
-
-    let x = document.getElementById("navbar");
-
-    if(x.style.maxHeight == '60px' || x.style.maxHeight == '' || x.style.height == '60px'){
-        x.style.maxHeight = " 1000px";
-        document.getElementById('bar1').style.transform = 'rotate(-45deg) translate(-3px,7px)';
-        document.getElementById('bar3').style.transform = 'rotate(45deg) translate(-3px,-7px)';
-        document.getElementById('bar2').style.opacity = '0';
-        setTimeout(function() {
-            x.style.transition = '';
-            x.style.transition = '0.5s cubic-bezier(0, 1, 0, 1)';
-        }, 500);
-    }
-    else
-    {
-        x.style.maxHeight = "60px";
-        document.getElementById('bar1').style.transform = 'rotate(0deg) translate(0px,0px)';
-        document.getElementById('bar3').style.transform = 'rotate(0deg) translate(0px,0px)';
-        document.getElementById('bar2').style.opacity = '1';
-        setTimeout(function() {
-            x.style.transition = '';
-            x.style.transition = '1s ease-in;';
-        }, 500);
-    }
-}
-
-function navchange() {
-    if(window.innerWidth > 850 && window.scrollY > 2)
-    {
-        document.getElementById('nav-logo-image').style.marginTop = '13px';
-        document.getElementById('nav-logo-image').style.height = '44px';
-        document.getElementById('navbar-ul').style.marginTop = '20px';
-        document.getElementById('navbar').style.height = '70px';
-    }
-
-    else if(window.innerWidth > 850 && window.scrollY <= 2)
-    {
-        document.getElementById('nav-logo-image').style.marginTop = '22px';
-        document.getElementById('nav-logo-image').style.height = '50px';
-        document.getElementById('navbar-ul').style.marginTop = '29px';
-        document.getElementById('navbar').style.height = '83px';
-    }
-
-    else
-    {
-        document.getElementById('nav-logo-image').style.marginTop = '10px';
-        document.getElementById('nav-logo-image').style.height = '40px';
-        document.getElementById('navbar-ul').style.marginTop = '60px';
-        document.getElementById('navbar').style.height = 'auto';
-    }
-}
 
 window.onresize = function() {
     let x = document.getElementById("navbar");
