@@ -27,6 +27,12 @@ body
     left: 8%;
   }
 
+  .nav-logo a:focus
+  {
+    outline: none;
+    border: none;
+  }
+
   .nav-logo-img {
     height: 50px;
     margin-top: 22px;
@@ -400,46 +406,75 @@ body
     }
 }
 
-
-    
-
-
-
-
-
 /*Our Courses End*/
 
-/*Our Mission*/
-#our-mission {
-  background-image: url("../images/Our_mission_bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; 
-  width:100%;
-}
 
-.img-mission {
-    background: linear-gradient(180deg, #0F3C76 0%, #0B2B55 100%);
-    width: 80%;
-    font-family: 'Dancing Script', cursive;
-    color: #fdca76;
-    font-size: 24px;
-    transform: scale(1.1);
+
+
+
+
+/*Our Mission*/
+
+#home-our-mission {
+  background-color:#0B2B55;
+  background-size: cover;
+  width:100%;
 }
 
 .mission-para
 {
   font-size: 19px;
+  color: #fff;
 }
 
+@media(max-width: 767px)
+{
+  .mission-para
+  {
+    font-size: 16px;
+  }
+}
+
+.heading-h1{
+  text-align: center;
+    color: #fff;
+    margin-bottom: -17px;
+}
+
+.hr-p{
+  height: 3px;
+  margin-top: 18px;
+  width: 107px;
+    background: #FDCA76;
+}
 
 /*Our Mission End*/
 
 /*Form*/
-#form {
+#home-form {
   width:100%;
+  background-image: url("../images/Contact_bg.jpg");
+  background-repeat: no-repeat;
+  /*background-image: url("../Images/Contact_bg.jpg"), url("../Images/Our_courses_boxes.svg");
+  background-position: left top,right top;
+  background-repeat: no-repeat, no-repeat;*/
 }
 
-input[type=text]{
+.f1{
+  margin-top: 67px;
+}
+
+.suggest-txt{
+  font-size:16px;
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
+  border: 1px solid #ccc;
+}
+
+.home-form-input-t{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -450,8 +485,8 @@ input[type=text]{
   font-size: 16px;
 }
 
-input[type=submit] {
-  width: 27%;
+.home-form-input-s{
+ width: 27%;
   background-color: #0F3C76;
   color: white;
   padding: 14px 20px;
@@ -461,24 +496,13 @@ input[type=submit] {
   cursor: pointer;
   font-size: 16px;
 }
-textarea {
-    width: 100%;
-    font-size: 16px;
-    padding: 12px 20px;
-    resize: none;
-    border: 1px solid #ccc;
-}
 
-label {
-  font-size: 16px;
-}
-
-.pt-3 {
+.head-con {
   text-align: right;
   padding-bottom:10px;
+  color: #000;
 }
 /*Form End*/
-
 
 /*Profile-Courses*/
 
