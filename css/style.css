@@ -508,3 +508,21 @@ body
 
 
 /*Profile-Courses End*/
+
+
+
+/*login-page Start*/
+.login{
+  
+  background: url("../images/login.jpg"), #0D2C54;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    padding-top: 90px;
+}
+
+/*login page End*/
+
