@@ -524,5 +524,81 @@ body
     padding-top: 90px;
 }
 
+.forgot-pw{
+  float: right;
+}
+
+.login-form-input-t{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.login-form-input-s{
+  width: 50%;
+  background-color: #fdca76;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.login-form-hr{
+  border-top: 1px solid #000;
+}
+.or{
+  text-align: center;
+}
+.cont-google{
+  width: 100%;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  font-size: 16px;
+
+}
+.register-button{
+  width: 100%;
+  background-color: #fbdeae;
+  font-weight: 600;
+  color:#000;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.google{
+  margin-top: -93px;
+    margin-bottom: 3px;
+    margin-right: 204px;
+    width:20px;
+}
+
+.outer-box{
+  background-color:#fff;
+  border-radius:18px;
+}
+
+.inner-box{
+  border-radius: 18px;
+    border: 1px solid #fbca76;
+    margin: 11px 0 11px 0px;
+}
+.login-square{
+  height: 308px;
+    margin-top: 118px;
+    margin-left: 89px;
+}
+
 /*login page End*/
 
