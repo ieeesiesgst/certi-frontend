@@ -451,7 +451,7 @@ body
 
 .mission-para
 {
-  font-size: 19px;
+  font-size: 17px;
   color: #fff;
 }
 
@@ -459,14 +459,8 @@ body
 {
   .mission-para
   {
-    font-size: 16px;
+    font-size: 14px;
   }
-}
-
-.heading-h1{
-  text-align: center;
-    color: #fff;
-    margin-bottom: -17px;
 }
 
 .hr-p{
@@ -486,10 +480,6 @@ body
   /*background-image: url("../Images/Contact_bg.jpg"), url("../Images/Our_courses_boxes.svg");
   background-position: left top,right top;
   background-repeat: no-repeat, no-repeat;*/
-}
-
-.f1{
-  margin-top: 67px;
 }
 
 .suggest-txt{
@@ -525,10 +515,35 @@ body
   font-size: 16px;
 }
 
-.head-con {
-  text-align: right;
-  padding-bottom:10px;
-  color: #000;
+
+.box-bg-home-contact
+{
+    position: relative;
+    z-index: 1;
+}
+
+.box-bg-home-contact:before
+{
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -40px;
+    height: 120px;
+    width: 180px;
+    background: url('../images/Our_courses_boxes.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    opacity: 0.9;
+    transform: scaleX(-1);
+}
+
+@media(max-width: 567px)
+{
+    .box-bg-home-contact:before
+    {
+        right: -15px;
+    }
 }
 /*Form End*/
 
