@@ -242,7 +242,8 @@ body
     display: flex;
     width: fit-content;
     background-color: #ffffff;
-    border-radius: 5px;  
+    border-radius: 5px;
+    cursor: pointer;
   }
   .fa-angle-right:before{
     font-size: 28px;
