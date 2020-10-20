@@ -510,8 +510,8 @@ body
 }
 
 .fab{
-  padding: 10px;
-  font-size: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 10px;
 }
 .fab:hover{
@@ -526,7 +526,10 @@ body
 .fa-instagram{
   color: #fdca76;
 }
-.fa-facebook-f{
+.fa-facebook{
+  color: #fdca76;
+}
+.fa-github{
   color: #fdca76;
 }
 
