@@ -599,8 +599,8 @@ body
 
 
 /*login-page Start*/
-.login{
-  
+.login
+{
   background: url("../images/login.jpg"), #0D2C54;
     width: 100%;
     height: auto;
@@ -619,6 +619,15 @@ body
   }
 }
 
+@media(min-height: 728px)
+{
+  .login
+  {
+    padding-top:  100px;
+    height: 88vh;
+  }
+}
+
 .forgot-pw{
   float: right;
   color: #000;
@@ -629,7 +638,6 @@ body
     width: 50%;
     background-color: #fdca76;
     color: #0d2c54;
-    margin: 8px 0;
     border: none;
     border-radius: 4px;
     font-size: 16px;
@@ -640,7 +648,6 @@ body
   font-weight: 600;
   background-color: #fff;
   padding: 14px 20px;
-  margin: 8px 0;
   border: 1px solid #000;
   box-sizing: border-box;
   font-size: 16px;
@@ -652,7 +659,6 @@ body
   font-weight: 600;
   color:#000;
   padding: 14px 20px;
-  margin: 8px 0;
   border: 1px solid #000;
   font-size: 16px;
   text-align: center;
