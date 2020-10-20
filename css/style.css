@@ -575,10 +575,15 @@ body
   padding: 14px 20px;
   margin: 8px 0;
   border: 1px solid #000;
-  border-radius: 4px;
   font-size: 16px;
+  text-align: center;
 }
 
+.regnow{
+    color: #0c2c53;
+    text-decoration: none;
+    font-weight: 600;
+}
 .google{
   margin-top: -93px;
     margin-bottom: 3px;
