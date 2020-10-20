@@ -201,6 +201,14 @@ body
       color: #0D2C54;
     }
   }
+
+
+  #notnav
+  {
+    background: rgba(0,0,0,0.7);
+    z-index: 999;
+    display: none;
+  }
   
   /* HEADER */
   .header{
