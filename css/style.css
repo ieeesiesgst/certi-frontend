@@ -499,21 +499,35 @@ body
   font-size:16px;
   width: 100%;
   padding: 12px 20px;
+  margin: 5px 0;
   box-sizing: border-box;
   border-radius: 4px;
   resize: none;
   border: 1px solid #ccc;
 }
 
+.suggest-txt:focus
+{
+  box-shadow: 0px 0px 3px #0d2c54;
+  outline: none;
+}
+
 .home-form-input-t{
   width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 5px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 16px;
+  transition: 0.3s;
+}
+
+.home-form-input-t:focus
+{
+  box-shadow: 0px 0px 3px #0d2c54;
+  outline: none;
 }
 
 .home-form-input-s{
@@ -562,6 +576,7 @@ body
 /*Footer start*/
 .footer{
     background-color: #0D2C54;
+    box-shadow: 0px -4px 4px rgba(0,0,0,0.7);
 }
 
 .footer-icons
@@ -574,15 +589,7 @@ body
 }
 .footer-icons:hover{
   opacity: 0.7;
-}
-
-
-
-  /*Code by Mrunal*/
-
-
-
-  
+}  
 
 /*Footer end*/
 
@@ -605,19 +612,17 @@ body
     padding-top: 90px;
 }
 
+@media(max-width: 767px)
+{
+  .login
+  {
+    padding-top: 40px;
+  }
+}
+
 .forgot-pw{
   float: right;
   color: #000;
-}
-
-.login-form-input-t{
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #000;
-  box-sizing: border-box;
-  font-size: 16px;
 }
 
 .login-form-input-s{
@@ -625,18 +630,12 @@ body
     width: 50%;
     background-color: #fdca76;
     color: #0d2c54;
-    padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     font-size: 16px;
 }
-.login-form-hr{
-  border-top: 1px solid #000;
-}
-.or{
-  text-align: center;
-}
+
 .cont-google{
   width: 100%;
   font-weight: 600;
@@ -646,8 +645,8 @@ body
   border: 1px solid #000;
   box-sizing: border-box;
   font-size: 16px;
-
 }
+
 .register-button{
   width: 100%;
   background-color: #fbdeae;
@@ -665,11 +664,13 @@ body
     text-decoration: none;
     font-weight: 600;
 }
-.google{
-  margin-top: -93px;
-    margin-bottom: 3px;
-    margin-right: 204px;
-    width:20px;
+
+.google-signin
+{
+  height: 16px;
+  width: auto;
+  margin-top: -3px;
+  padding-right: 5px;
 }
 
 .outer-box{
@@ -680,7 +681,6 @@ body
 .inner-box{
   border-radius: 18px;
     border: 1px solid #fbca76;
-    margin: 11px 0 11px 0px;
 }
 .login-square{
   height: 308px;
