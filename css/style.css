@@ -255,6 +255,10 @@ body
     border: none;
     border-radius: 0 5px 5px 0;
   }
+  .yellow-button:focus
+  {
+    outline: none;
+  }
 
 
   @media screen and (max-width: 991px){
