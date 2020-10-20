@@ -5,7 +5,7 @@ body
 	scroll-behavior: smooth;
 	margin: 0;
 	font-size: 100%;
-	font-family: sans-serif;
+	font-family: 'Poppins', sans-serif;
 	background: #fff;
 }
 
@@ -35,7 +35,7 @@ body
 
   .nav-logo-img {
     height: 50px;
-    margin-top: 22px;
+    margin-top: 17px;
     width: auto;
     transition: 0.5s ease-in-out;
   }
@@ -294,117 +294,145 @@ body
 /*Navbar End*/
 
 /*Our Courses*/
-#our-courses {
-    background-image: url("../Images/Courses_bg.jpg");
+
+#home-courses
+{
+    background: url(../images/Courses_bg.jpg);
     background-repeat: no-repeat;
-    background-position: right;
-    padding-top: 70px;
-}
-.vertical-pad {
-    padding-bottom: 35px;
+    background-size: cover;
 }
 
-.horizontal-pad {
-    padding-left: 30px;
+@media(max-width: 830px)
+{
+    #home-courses
+    {
+        background-position: 100% 100%;
+    }
 }
-.heading {
-    padding-bottom: 50px;
-    padding-top: 45px;
-    background-image: url("../Images/Our_courses_boxes.svg");
-    background-repeat: no-repeat;
-    padding-left: 35px;
+
+@media(max-width: 715px)
+{
+    #home-courses
+    {
+        background-position: 70% 100%;
+    }
 }
-.grid {
-    min-width: max-content;
+
+.home-course-div
+{
+    width:100%;
+    height: 280px;
+    overflow: hidden;
 }
-.wrapper {
-    display: flex;
-    justify-content: space-between;
-    overflow-x: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+
+.home-course-scroll 
+{
+    height:300px; /* 40px - more place for scrollbar, is hidden under parent box */
+    white-space:nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  -webkit-overflow-scrolling:touch;
 }
-.horizontal-scrollable > .grid { 
-    overflow-x: auto; 
-    white-space: nowrap;
-} 
-.wrapper::-webkit-scrollbar{
-    width: 0;
+
+.home-course-card
+{
+    display:inline-block;
+    width:250px;
+    height:250px;
+    background:#fff;
+    box-shadow: 2px 4px 4px rgba(0,0,0,0.25), -1px -1px 4px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    padding: 12px;
+    overflow: hidden;
 }
-.card {
+
+.home-course-scroll .home-course-card:first-child
+{
+    margin-left: 60px;
+}
+
+.home-course-scroll .home-course-card:last-child
+{
+    margin-right: 60px;
+}
+
+.home-course-card + .home-course-card
+{
+    margin-left:55px
+}
+
+.home-card-img
+{
+    width: 226px;
+    height: 150px;
+    border-radius: 3px;
+}
+
+@media(max-width: 767px)
+{
+    .home-course-card
+    {
+        transform: scale(0.9);
+    }
+
+    .home-course-card + .home-course-card
+    {
+        margin-left:0px
+    }
+
+    .home-course-scroll .home-course-card:first-child
+    {
+        margin-left: 20px;
+    }
+
+    .home-course-scroll .home-course-card:last-child
+    {
+        margin-right: 20px;
+    }
+}
+
+@media(max-width: 576px)
+{
+    .home-course-scroll .home-course-card:first-child
+    {
+        margin-left: 0px;
+    }
+
+    .home-course-scroll .home-course-card:last-child
+    {
+        margin-right: 0px;
+    }
+}
+
+.box-bg-home-courses
+{
     position: relative;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    border-radius: 10px;
-    width: 25%;
-    height: 290px;
-    margin: 15px 0 30px;
-    box-shadow: 0px 4px 4px rgba(0,0, 0, 0.15), 0px 4px 16px rgba(0, 0, 0, 0.15);
+    z-index: 1;
 }
 
-.card:hover .overlay {
-    opacity: 1;
-}
-
-.img {
-    height: 90%;
-    width: 84%;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack:  ;
-    justify-content: initial;
-    -webkit-box-align: initial;
-    align-items: initial;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    background: linear-gradient(180deg, #0F3C76 0%, #0B2B55 100%);
-}
-
-.button {
+.box-bg-home-courses:before
+{
+    content: '';
     position: absolute;
-    height: 45px;
-    color: #FDCA76;
-    background: linear-gradient(180deg, #0F3C76 0%, #0B2B55 100%);
-    font-size: 30px;
-    font-weight: 900;
-    left: 110px;
-    top: 235px;
-    border-radius: 5px 0px 0px 5px;
-    text-align: center;
-    width: 50px;
-}
-.course {
-    padding-right: 140px;
-    text-align:  justify;
+    top: -35px;
+    left: -30px;
+    height: 120px;
+    width: 180px;
+    background: url('../images/Our_courses_boxes.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    opacity: 0.9;
 }
 
-@media screen and (min-width: 480px)
+@media(max-width: 567px)
 {
-    .button {
-        left: 90px;
-        width: 46px;
-    }
-    .course {
-        padding-right: 53px;
+    .box-bg-home-courses:before
+    {
+        left: -15px;
     }
 }
-@media only screen and (min-width: 768px)
-{
-    .button {
-        left: 184px;
-        width: 73px;
-    }
-    .course {
-        padding-right: 110px;
-    }
-}
+
 
 /*Our Courses End*/
 
@@ -423,7 +451,7 @@ body
 
 .mission-para
 {
-  font-size: 19px;
+  font-size: 17px;
   color: #fff;
 }
 
@@ -431,14 +459,8 @@ body
 {
   .mission-para
   {
-    font-size: 16px;
+    font-size: 14px;
   }
-}
-
-.heading-h1{
-  text-align: center;
-    color: #fff;
-    margin-bottom: -17px;
 }
 
 .hr-p{
@@ -458,10 +480,6 @@ body
   /*background-image: url("../Images/Contact_bg.jpg"), url("../Images/Our_courses_boxes.svg");
   background-position: left top,right top;
   background-repeat: no-repeat, no-repeat;*/
-}
-
-.f1{
-  margin-top: 67px;
 }
 
 .suggest-txt{
@@ -497,10 +515,35 @@ body
   font-size: 16px;
 }
 
-.head-con {
-  text-align: right;
-  padding-bottom:10px;
-  color: #000;
+
+.box-bg-home-contact
+{
+    position: relative;
+    z-index: 1;
+}
+
+.box-bg-home-contact:before
+{
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -40px;
+    height: 120px;
+    width: 180px;
+    background: url('../images/Our_courses_boxes.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    opacity: 0.9;
+    transform: scaleX(-1);
+}
+
+@media(max-width: 567px)
+{
+    .box-bg-home-contact:before
+    {
+        right: -15px;
+    }
 }
 /*Form End*/
 
