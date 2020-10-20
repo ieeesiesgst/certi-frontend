@@ -552,28 +552,16 @@ body
     background-color: #0D2C54;
 }
 
-.fab{
+.footer-icons
+{
   padding-left: 5px;
   padding-right: 5px;
   width: 10px;
+  color: #fdca76;
+  transition: 0.3s;
 }
-.fab:hover{
+.footer-icons:hover{
   opacity: 0.7;
-}
-.fa-linkedin{
-  color: #fdca76;
-}
-.fa-youtube{
-  color: #fdca76;
-}
-.fa-instagram{
-  color: #fdca76;
-}
-.fa-facebook{
-  color: #fdca76;
-}
-.fa-github{
-  color: #fdca76;
 }
 
 
