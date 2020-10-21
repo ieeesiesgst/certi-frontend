@@ -114,6 +114,46 @@
             }
         }
 
+         function course_scroll(x)
+        {
+            var scroll_course = document.getElementById('home-course-scroll');
+
+            if(window.innerWidth>576)
+            {
+                if(x==1)
+                {
+                    scroll_course.scroll(scroll_course.scrollLeft-500,0);
+                }
+
+                else if(x==2)
+                {
+                    scroll_course.scroll(scroll_course.scrollLeft+500,0);
+                }
+
+                if(scroll_course.scrollLeft>0)
+                {
+                    $('.home-course-button-left').css('display','block');
+                }
+                else
+                {
+                    $('.home-course-button-left').css('display','none');
+                }
+
+                if((scroll_course.scrollWidth - window.innerWidth)>scroll_course.scrollLeft)
+                {
+                    $('.home-course-button-right').css('display','block');
+                }
+                else
+                {
+                    $('.home-course-button-right').css('display','none');
+                }
+            }
+            else
+            {
+                $('.home-course-button').css('display','none');
+            }
+        }
+        
     </script>
     
 
@@ -153,10 +193,265 @@
 
     </nav>
 
-
+     <div id="notnav" class="position-fixed h-100 w-100" onclick="menu();"></div>
 
     <!-- Active courses start -->
 
+
+    <!--PROFILE PIC-->
+           
+    <div class="container-fluid profile_pic"><br><br>
+       <br><br> <div class="row mx-auto pp">
+    </div><br>
+               <p class="container pp_name">Mr. Lorem Ipsum</p>
+        </div><br><br>
+
+        <!-- MY COURSES-->
+         
+<div class="container">
+    <h2> My Courses</h2><br>
+    <div class="card">  
+      <div class="card-body">
+         <a href="#"> <h4>BRUH MOMENT</h4> </a>
+          <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, laudantium saepe dicta Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, laudantium saepe dictaLorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, laudantium saepe dicta</p>
+          <h5> Progress</h5>
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+            aria-valuemin="0" aria-valuemax="100" style="width:40%">
+            </div>
+          </div><br>
+      </div>
+    </div>
+    <br><br>
+    <div class="card">  
+        <div class="card-body">
+            <a href="#"> <h4>BRUH MOMENT</h4> </a>
+            <p>  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, laudantium saepe dictaLorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, laudantium saepe dictaLorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, laudantium saepe dicta</p>
+            <h5> Progress</h5>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70"
+              aria-valuemin="0" aria-valuemax="100" style="width:70%">
+              </div>
+            </div><br>
+        </div>
+      </div>
+      <br><br>
+      <div class="card">  
+        <div class="card-body">
+            <a href="#"> <h4>BRUH MOMENT</h4> </a>
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, laudantium saepe dicta Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, laudantium saepe dictav</p>
+            <h5> Progress</h5>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100"
+              aria-valuemin="0" aria-valuemax="100" style="width:100%">
+              </div>
+            </div><br>
+        </div>
+      </div>
+      <br><br><br><br><br>
+
+
+      <!--RECOMMENDED COURSES-->
+
+
+
+<div id="home-courses" class="pb-5">
+    <div class="home-head pt-5 pb-4 container my-sm-4 my-2">
+        <h2 class="mb-0"><span class="box-bg-home-courses">Recommended Courses</span></h2>
+    </div>
+    <div class="home-course-div position-relative">
+
+        <button class="home-course-button home-course-button-left position-absolute text-center btn" onclick="course_scroll(1);"><i class="fas fa-angle-double-left"></i></button>
+
+        <button class="home-course-button home-course-button-right position-absolute text-center btn" onclick="course_scroll(2);"><i class="fas fa-angle-double-right"></i></button>
+
+        <div class="home-course-scroll pb-5 pt-md-1 px-1" id="home-course-scroll">
+
+
+            <div class="home-course-card mb-5">
+                <div class="home-card-img-div">
+                    <img src="images/Mobile_bg.jpg" class="home-card-img" alt="">
+                </div>
+                <div class="home-course-name pt-4">
+                    <h5 class="mb-0"><b>Course Name</b></h5>
+                </div>
+                <div class="home-course-text text-muted">
+                    <small>Some Text</small>
+                </div>
+            </div>
+
+
+            <div class="home-course-card mb-5">
+                <div class="home-card-img-div">
+                    <img src="images/Mobile_bg.jpg" class="home-card-img" alt="">
+                </div>
+                <div class="home-course-name pt-4">
+                    <h5 class="mb-0"><b>Course Name</b></h5>
+                </div>
+                <div class="home-course-text text-muted">
+                    <small>Some Text</small>
+                </div>
+            </div>
+
+
+            <div class="home-course-card mb-5">
+                <div class="home-card-img-div">
+                    <img src="images/Mobile_bg.jpg" class="home-card-img" alt="">
+                </div>
+                <div class="home-course-name pt-4">
+                    <h5 class="mb-0"><b>Course Name</b></h5>
+                </div>
+                <div class="home-course-text text-muted">
+                    <small>Some Text</small>
+                </div>
+            </div>
+
+
+            <div class="home-course-card mb-5">
+                <div class="home-card-img-div">
+                    <img src="images/Mobile_bg.jpg" class="home-card-img" alt="">
+                </div>
+                <div class="home-course-name pt-4">
+                    <h5 class="mb-0"><b>Course Name</b></h5>
+                </div>
+                <div class="home-course-text text-muted">
+                    <small>Some Text</small>
+                </div>
+            </div>
+
+
+            <div class="home-course-card mb-5">
+                <div class="home-card-img-div">
+                    <img src="images/Mobile_bg.jpg" class="home-card-img" alt="">
+                </div>
+                <div class="home-course-name pt-4">
+                    <h5 class="mb-0"><b>Course Name</b></h5>
+                </div>
+                <div class="home-course-text text-muted">
+                    <small>Some Text</small>
+                </div>
+            </div>
+
+
+            <div class="home-course-card mb-5">
+                <div class="home-card-img-div">
+                    <img src="images/Mobile_bg.jpg" class="home-card-img" alt="">
+                </div>
+                <div class="home-course-name pt-4">
+                    <h5 class="mb-0"><b>Course Name</b></h5>
+                </div>
+                <div class="home-course-text text-muted">
+                    <small>Some Text</small>
+                </div>
+            </div>
+
+
+            <div class="home-course-card mb-5">
+                <div class="home-card-img-div">
+                    <img src="images/Mobile_bg.jpg" class="home-card-img" alt="">
+                </div>
+                <div class="home-course-name pt-4">
+                    <h5 class="mb-0"><b>Course Name</b></h5>
+                </div>
+                <div class="home-course-text text-muted">
+                    <small>Some Text</small>
+                </div>
+            </div>
+
+
+            <div class="home-course-card mb-5">
+                <div class="home-card-img-div">
+                    <img src="images/Mobile_bg.jpg" class="home-card-img" alt="">
+                </div>
+                <div class="home-course-name pt-4">
+                    <h5 class="mb-0"><b>Course Name</b></h5>
+                </div>
+                <div class="home-course-text text-muted">
+                    <small>Some Text</small>
+                </div>
+            </div>
+
+
+            <div class="home-course-card mb-5">
+                <div class="home-card-img-div">
+                    <img src="images/Mobile_bg.jpg" class="home-card-img" alt="">
+                </div>
+                <div class="home-course-name pt-4">
+                    <h5 class="mb-0"><b>Course Name</b></h5>
+                </div>
+                <div class="home-course-text text-muted">
+                    <small>Some Text</small>
+                </div>
+            </div>
+
+
+            <div class="home-course-card mb-5">
+                <div class="home-card-img-div">
+                    <img src="images/Mobile_bg.jpg" class="home-card-img" alt="">
+                </div>
+                <div class="home-course-name pt-4">
+                    <h5 class="mb-0"><b>Course Name</b></h5>
+                </div>
+                <div class="home-course-text text-muted">
+                    <small>Some Text</small>
+                </div>
+            </div>
+
+
+            <div class="home-course-card mb-5">
+                <div class="home-card-img-div">
+                    <img src="images/Mobile_bg.jpg" class="home-card-img" alt="">
+                </div>
+                <div class="home-course-name pt-4">
+                    <h5 class="mb-0"><b>Course Name</b></h5>
+                </div>
+                <div class="home-course-text text-muted">
+                    <small>Some Text</small>
+                </div>
+            </div>
+
+
+            <div class="home-course-card mb-5">
+                <div class="home-card-img-div">
+                    <img src="images/Mobile_bg.jpg" class="home-card-img" alt="">
+                </div>
+                <div class="home-course-name pt-4">
+                    <h5 class="mb-0"><b>Course Name</b></h5>
+                </div>
+                <div class="home-course-text text-muted">
+                    <small>Some Text</small>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="text-right container mt-4">
+        <a class="py-2 px-2 home-view-courses text-white btn">View All Courses</a>
+    </div>
+</div>
+
+<!--FOOTER-->
+
+
+<footer class="footer">
+    <div class="container">
+        
+      <h6 class="text-center text-white pt-4"><b>FOLLOW US ON</b></h6>  
+      <div class="row  Footericons justify-content-center">
+          <a href="#"><i class="footer-icons fab fa-linkedin mr-3"></i></a>
+          <a href="#"><i class="footer-icons fab fa-youtube mr-3"></i></a>
+          <a href="#"><i class="footer-icons fab fa-instagram mr-3"></i></a>
+          <a href="#"><i class="footer-icons fab fa-facebook mr-3"></i></a>
+          <a href="#"><i class="footer-icons fab fa-github mr-3"></i></a>
+          
+      </div>
+      <div class="text-center pt-3 pb-1"><small class="text-white">&copy; Copyrights 2020</small></div>
+  </div>
+  
+  
+  
+  </footer>
 
 
 
