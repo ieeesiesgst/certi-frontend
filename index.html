@@ -116,6 +116,46 @@
             }
         }
 
+        function course_scroll(x)
+        {
+            var scroll_course = document.getElementById('home-course-scroll');
+
+            if(window.innerWidth>576)
+            {
+                if(x==1)
+                {
+                    scroll_course.scroll(scroll_course.scrollLeft-500,0);
+                }
+
+                else if(x==2)
+                {
+                    scroll_course.scroll(scroll_course.scrollLeft+500,0);
+                }
+
+                if(scroll_course.scrollLeft>0)
+                {
+                    $('.home-course-button-left').css('display','block');
+                }
+                else
+                {
+                    $('.home-course-button-left').css('display','none');
+                }
+
+                if((scroll_course.scrollWidth - window.innerWidth)>scroll_course.scrollLeft)
+                {
+                    $('.home-course-button-right').css('display','block');
+                }
+                else
+                {
+                    $('.home-course-button-right').css('display','none');
+                }
+            }
+            else
+            {
+                $('.home-course-button').css('display','none');
+            }
+        }
+
     </script>
     
 
@@ -178,8 +218,13 @@
         <div class="home-head pt-5 pb-4 container my-sm-4 my-2">
             <h2 class="mb-0"><span class="box-bg-home-courses">Our Courses</span></h2>
         </div>
-        <div class="home-course-div">
-            <div class="home-course-scroll pb-5 pt-md-1 px-1">
+        <div class="home-course-div position-relative">
+
+            <button class="home-course-button home-course-button-left position-absolute text-center btn" onclick="course_scroll(1);"><i class="fas fa-angle-double-left"></i></button>
+
+            <button class="home-course-button home-course-button-right position-absolute text-center btn" onclick="course_scroll(2);"><i class="fas fa-angle-double-right"></i></button>
+
+            <div class="home-course-scroll pb-5 pt-md-1 px-1" id="home-course-scroll">
 
 
                 <div class="home-course-card mb-5">
@@ -422,6 +467,8 @@
 
 <script>
 
+    course_scroll(0);
+
 window.onresize = function() {
     let x = document.getElementById("navbar");
     navchange();
@@ -441,10 +488,22 @@ window.onresize = function() {
         document.getElementById('bar2').style.opacity = '1';
         document.getElementById('notnav').style.display = 'none';
     }
+
+    if(window.innerWidth>576)
+    {
+        course_scroll(0);
+    }
 };
 
 window.onscroll = function() {
     navchange();
+}
+
+document.getElementById('home-course-scroll').onscroll = function() {
+    if(window.innerWidth>576)
+    {
+        course_scroll(0);
+    }
 }
 
 
