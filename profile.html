@@ -70,6 +70,7 @@
                 document.getElementById('bar1').style.transform = 'rotate(-45deg) translate(-3px,7px)';
                 document.getElementById('bar3').style.transform = 'rotate(45deg) translate(-3px,-7px)';
                 document.getElementById('bar2').style.opacity = '0';
+                document.getElementById('notnav').style.display = 'block';
                 setTimeout(function() {
                     x.style.transition = '';
                     x.style.transition = '0.5s cubic-bezier(0, 1, 0, 1)';
@@ -81,6 +82,7 @@
                 document.getElementById('bar1').style.transform = 'rotate(0deg) translate(0px,0px)';
                 document.getElementById('bar3').style.transform = 'rotate(0deg) translate(0px,0px)';
                 document.getElementById('bar2').style.opacity = '1';
+                document.getElementById('notnav').style.display = 'none';
                 setTimeout(function() {
                     x.style.transition = '';
                     x.style.transition = '1s ease-in;';
@@ -99,7 +101,7 @@
 
             else if(window.innerWidth > 850 && window.scrollY <= 2)
             {
-                document.getElementById('nav-logo-image').style.marginTop = '22px';
+                document.getElementById('nav-logo-image').style.marginTop = '17px';
                 document.getElementById('nav-logo-image').style.height = '50px';
                 document.getElementById('navbar-ul').style.marginTop = '29px';
                 document.getElementById('navbar').style.height = '83px';
@@ -248,9 +250,8 @@
             </div><br>
         </div>
       </div>
-      <br><br><br><br><br>
-
-
+      <br><br>
+  </div>
       <!--RECOMMENDED COURSES-->
 
 
@@ -463,6 +464,8 @@
 
 <script>
 
+    course_scroll(0);
+
 window.onresize = function() {
     let x = document.getElementById("navbar");
     navchange();
@@ -472,6 +475,7 @@ window.onresize = function() {
         document.getElementById('bar1').style.transform = 'rotate(0deg) translate(0px,0px)';
         document.getElementById('bar3').style.transform = 'rotate(0deg) translate(0px,0px)';
         document.getElementById('bar2').style.opacity = '1';
+        document.getElementById('notnav').style.display = 'none';
     }
     else
     {
@@ -479,11 +483,21 @@ window.onresize = function() {
         document.getElementById('bar1').style.transform = 'rotate(0deg) translate(0px,0px)';
         document.getElementById('bar3').style.transform = 'rotate(0deg) translate(0px,0px)';
         document.getElementById('bar2').style.opacity = '1';
+        document.getElementById('notnav').style.display = 'none';
     }
+
+    course_scroll(0);
 };
 
 window.onscroll = function() {
     navchange();
+}
+
+document.getElementById('home-course-scroll').onscroll = function() {
+    if(window.innerWidth>576)
+    {
+        course_scroll(0);
+    }
 }
 
 
