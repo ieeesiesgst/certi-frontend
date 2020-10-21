@@ -482,6 +482,19 @@ body
   right: 30px;
 }
 
+.home-view-courses
+{
+  outline: none;
+  background: #0d2c54;
+  border: none;
+  border-radius: 0;
+}
+
+.home-view-courses:focus
+{
+  outline: none;
+}
+
 
 /*Our Courses End*/
 
