@@ -796,3 +796,20 @@ body
 }
 
 /*login page End*/
+
+/*Register start*/
+.register{
+  background: url("../images/login.jpg"), #0D2C54;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    padding-top: 90px;
+}
+.outer-box-reg{
+  border-radius:18px;
+background-color: #0c2c53
+}
+/*Register end */
