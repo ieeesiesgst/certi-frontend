@@ -210,6 +210,59 @@ body
     display: none;
   }
   
+  /* course_info navbar*/
+  .vl {
+    border-left: 3px solid #ffffff;
+    height: 70px;
+  }
+  .rounded-circle {
+      height: 40px;
+      width: auto;
+      transition: 0.5s ease-in-out;
+      border: 3px black;
+      border-style: double;
+  }
+
+  /*course_info header*/
+
+  .jumbotron {
+    background: url("C:/Users/hp/Desktop/Certi_frontend/certi-frontend/images/Hero.jpg"), #0D2C54;
+    width: 100%;
+    height: 445px;
+    background-size: cover;
+    background-position: center 80%;
+    background-repeat: no-repeat;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    padding-top: 90px;
+  }
+  .card {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    left: 0px;
+    top:70px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.15),0px 4px 16px rgba(0,0,0,0.15);
+    z-index: 1;
+  }
+  .card-body {
+    position: absolute;
+    width: 90%;
+    height: 290px;
+    left: 5%;
+    top: 5%;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #0F3C76 0%,#0B2B55 100%);
+  }
+  .content {
+    top: 85px;
+  }
+  .content h4 {
+    color: #ffffff;
+  }
   /* HEADER */
   .header{
     background: url('../images/Hero.jpg'), #0D2C54;
@@ -265,10 +318,16 @@ body
     .header{
       background-position: center;
     }
+    .jumbotron{
+      background-position: center;
+    }
   }
 
   @media screen and (max-width: 850px){
     .header{
+      padding-top: 70px;
+    }
+    .jumbotron{
       padding-top: 70px;
     }
   }
@@ -277,10 +336,16 @@ body
     .header{
       background-position: 100%;
     }
+    .jumbotron{
+      background-position: 100%;
+    }
   }
 
   @media screen and (max-width: 510px){
     .header{
+      background-position: 76%;
+    }
+    .jumbotron{
       background-position: 76%;
     }
   }
@@ -289,16 +354,25 @@ body
     .header{
       background-position: 73%;
     }
+    .jumbotron{
+      background-position: 73%;
+    }
   }
 
   @media screen and (max-width: 383px){
     .header{
       background-position: 70%;
     }
+    .jumbotron{
+      background-position: 70%;
+    }
   }
 
   @media screen and (max-width: 353px){
     .header{
+      background-position: 60%;
+    }
+    .jumbotron{
       background-position: 60%;
     }
   }
