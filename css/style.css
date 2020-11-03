@@ -395,10 +395,10 @@ body
       width: 213px;
     }
   }
-  @media screen and (max-width: 575px){
+  @media screen and (max-width: 575.5px){
     .jumbotron{
       padding-top: 70px;
-      height: 550px;
+      height: 530px;
     }
     .card {
       height: 230px;
