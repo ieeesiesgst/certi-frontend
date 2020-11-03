@@ -239,7 +239,7 @@ body
   }
   .card {
     position: relative;
-    width: 100%;
+    width: 350px;
     height: 350px;
     left: 0px;
     top:70px;
@@ -248,14 +248,13 @@ body
     box-shadow: 0px 4px 4px rgba(0,0,0,0.15),0px 4px 16px rgba(0,0,0,0.15);
     z-index: 1;
   }
-  .card-body {
+  .card-body img {
     position: absolute;
-    width: 90%;
+    width: 315px;
     height: 290px;
     left: 5%;
     top: 5%;
     border-radius: 10px;
-    background: linear-gradient(180deg, #0F3C76 0%,#0B2B55 100%);
   }
   .content {
     top: 85px;
@@ -324,10 +323,12 @@ body
     }
     .card {
       height: 300px;
+      width: 310px;
       top: 70px;
     }
-    .card-body{
-      height: 280px;
+    .card-body img{
+      height: 270px;
+      width: 280px;
     }
   }
 
@@ -340,50 +341,73 @@ body
       height: 450px;
     }
     .card {
-      height: 300px;
-      top: 30px;
+      height: 260px;
+      width: 270px;
+      top: 70px;
     }
-    .card-body{
-      height: 280px;
+    .card-body img{
+      height: 230px;
+      width: 240px;
     }
   }
   @media screen and (max-width: 760px){
     .jumbotron{
-      background-position: 100%;
+      padding-top: 70px;
       height: 450px;
     }
     .card {
-      height: 300px;
-      top: 30px;
+      height: 250px;
+      width: 260px;
+      top: 70px;
     }
-    .card-body{
-      height: 280px;
+    .card-body img{
+      height: 220px;
+      width: 230px;
     }
   }
-  @media screen and (max-width: 610px){
+  @media screen and (max-width: 660px){
     .jumbotron{
-      background-position: 100%;
+      padding-top: 70px;
       height: 450px;
     }
     .card {
-      height: 280px;
-      top: 30px;
+      height: 230px;
+      width: 240px;
+      top: 70px;
     }
-    .card-body{
-      height: 260px;
+    .card-body img{
+      height: 205px;
+      width: 213px;
     }
   }
   @media screen and (max-width: 600px){
     .jumbotron{
-      background-position: 100%;
-      height: 560px;
+      padding-top: 70px;
+      height: 450px;
     }
     .card {
-      height: 225px;
-      top: 20px;
+      height: 230px;
+      width: 240px;
+      top: 70px;
     }
-    .card-body{
+    .card-body img{
       height: 205px;
+      width: 213px;
+    }
+  }
+  @media screen and (max-width: 575px){
+    .jumbotron{
+      padding-top: 70px;
+      height: 550px;
+    }
+    .card {
+      height: 230px;
+      width: 240px;
+      top: 70px;
+    }
+    .card-body img{
+      height: 205px;
+      width: 213px;
     }
   }
   @media screen and (max-width: 560px){
@@ -391,33 +415,24 @@ body
       background-position: 100%;
     }
     .jumbotron{
-      background-position: 100%;
+      background-position: 70%;
+      padding-top: 70px;
       height: 550px;
     }
     .card {
-      height: 215px;
-      width: 65%;
+      height: 220px;
+      width: 230px;
       top: 30px;
     }
-    .card-body{
-      height: 195px;
+    .card-body img{
+      height: 193px;
+      width: 203px;
     }
   }
 
   @media screen and (max-width: 510px){
     .header{
       background-position: 76%;
-    }
-    .jumbotron{
-      background-position: 76%;
-      height: 550px;
-    }
-    .card {
-      height: 215px;
-      top: 30px;
-    }
-    .card-body{
-      height: 195px;
     }
   }
 
@@ -427,14 +442,17 @@ body
     }
     .jumbotron{
       background-position: 70%;
+      padding-top: 70px;
       height: 550px;
     }
     .card {
-      height: 215px;
+      height: 210px;
+      width: 220px;
       top: 30px;
     }
-    .card-body{
-      height: 195px;
+    .card-body img{
+      height: 183px;
+      width: 193px;
     }
   }
 
@@ -444,14 +462,17 @@ body
     }
     .jumbotron{
       background-position: 70%;
+      padding-top: 70px;
       height: 550px;
     }
     .card {
       height: 200px;
+      width: 210px;
       top: 30px;
     }
-    .card-body{
-      height: 180px;
+    .card-body img{
+      height: 173px;
+      width: 183px;
     }
   }
 
@@ -461,14 +482,17 @@ body
     }
     .jumbotron{
       background-position: 60%;
+      padding-top: 70px;
       height: 550px;
     }
     .card {
-      height: 180px;
-      top: 20px;
+      height: 200px;
+      width: 210px;
+      top: 30px;
     }
-    .card-body{
-      height: 160px;
+    .card-body img{
+      height: 173px;
+      width: 183px;
     }
   }
 
