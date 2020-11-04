@@ -226,7 +226,7 @@ body
   /*course_info header*/
 
   .jumbotron {
-    background: url("C:/Users/hp/Desktop/Certi_frontend/certi-frontend/images/Hero.jpg"), #0D2C54;
+    background: url("../images/Hero.jpg"), #0D2C54;
     width: 100%;
     height: 445px;
     background-size: cover;
@@ -330,6 +330,9 @@ body
       height: 270px;
       width: 280px;
     }
+    .content{
+      left: 35px;
+    }
   }
 
   @media screen and (max-width: 850px){
@@ -398,16 +401,19 @@ body
   @media screen and (max-width: 575.5px){
     .jumbotron{
       padding-top: 70px;
-      height: 530px;
+      height: 533px;
     }
     .card {
       height: 230px;
       width: 240px;
-      top: 70px;
+      top: 30px;
     }
     .card-body img{
       height: 205px;
       width: 213px;
+    }
+    .content{
+      left: 0px;
     }
   }
   @media screen and (max-width: 560px){
