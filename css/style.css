@@ -258,9 +258,13 @@ body
   }
   .content {
     top: 85px;
+    left: -25px;
   }
   .content h4 {
     color: #ffffff;
+  }
+  .btn-warning strong{
+    top: 20px;
   }
   /* HEADER */
   .header{
@@ -331,7 +335,7 @@ body
       width: 280px;
     }
     .content{
-      left: 35px;
+      left: 23px;
     }
   }
 
@@ -351,6 +355,9 @@ body
     .card-body img{
       height: 230px;
       width: 240px;
+    }
+    .content{
+      left: -5px;
     }
   }
   @media screen and (max-width: 760px){
@@ -382,6 +389,7 @@ body
       height: 205px;
       width: 213px;
     }
+    
   }
   @media screen and (max-width: 600px){
     .jumbotron{
@@ -479,6 +487,9 @@ body
     .card-body img{
       height: 173px;
       width: 183px;
+    }
+    .content{
+      left: 0px;
     }
   }
 
