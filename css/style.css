@@ -799,7 +799,7 @@ body
 
 /*Register start*/
 .register{
-  background: url("../images/login.jpg"), #0D2C54;
+  background: url("../images/register.jpg"), #0D2C54;
     width: 100%;
     height: auto;
     background-size: cover;
