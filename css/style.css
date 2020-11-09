@@ -210,6 +210,239 @@ body
     display: none;
   }
   
+  /* course_info navbar*/
+  .vl {
+    border-left: 3px solid #ffffff;
+    height: 70px;
+  }
+  .rounded-circle {
+      height: 40px;
+      width: auto;
+      transition: 0.5s ease-in-out;
+      border: 3px black;
+      border-style: double;
+  }
+
+  /*course_info header*/
+
+  .CourseHead {
+    background: url("../images/Hero.jpg"), #0D2C54;
+    width: 100%;
+    height: 445px;
+    background-size: cover;
+    background-position: center 80%;
+    background-repeat: no-repeat;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    padding-top: 90px;
+  }
+  .CourseCard {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    left: 0px;
+    top:70px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.15),0px 4px 16px rgba(0,0,0,0.15);
+    z-index: 1;
+  }
+  #CourseImage {
+    position: absolute;
+    width: 315px;
+    height: 290px;
+    left: 5%;
+    top: 5%;
+    border-radius: 10px;
+  }
+  .content {
+    top: 85px;
+    left: -25px;
+  }
+  #Author{
+    color: #ffffff;
+  }
+  #CourseName{
+    font-size: 30px;
+  }
+  #enrollbtn{
+    top: 20px;
+  }
+
+  @media screen and (max-width: 991px){
+    .CourseHead{
+      padding-top: 70px;
+      height: 450px;
+    }
+    .CourseCard {
+      height: 300px;
+      width: 310px;
+      top: 70px;
+    }
+    #CourseImage{
+      height: 270px;
+      width: 280px;
+    }
+    .content{
+      left: 23px;
+    }
+  }
+
+  @media screen and (max-width: 850px){
+    .CourseHead{
+      padding-top: 70px;
+      height: 450px;
+    }
+    .CourseCard {
+      height: 260px;
+      width: 270px;
+      top: 70px;
+    }
+    #CourseImage{
+      height: 230px;
+      width: 240px;
+    }
+    .content{
+      left: -5px;
+    }
+  }
+  @media screen and (max-width: 760px){
+    .CourseHead{
+      padding-top: 70px;
+      height: 450px;
+    }
+    .CourseCard{
+      height: 250px;
+      width: 260px;
+      top: 70px;
+    }
+    #CourseImage{
+      height: 220px;
+      width: 230px;
+    }
+  }
+  @media screen and (max-width: 660px){
+    .CourseHead{
+      padding-top: 70px;
+      height: 450px;
+    }
+    .CourseCard {
+      height: 230px;
+      width: 240px;
+      top: 70px;
+    }
+    #CourseImage{
+      height: 205px;
+      width: 213px;
+    }
+    
+  }
+  @media screen and (max-width: 600px){
+    .CourseHead{
+      padding-top: 70px;
+      height: 450px;
+    }
+    .CourseCard {
+      height: 230px;
+      width: 240px;
+      top: 70px;
+    }
+    #CourseImage{
+      height: 205px;
+      width: 213px;
+    }
+  }
+  @media screen and (max-width: 575.5px){
+    .CourseHead{
+      padding-top: 70px;
+      height: 533px;
+    }
+    .CourseCard {
+      height: 230px;
+      width: 240px;
+      top: 30px;
+    }
+    #CourseImage{
+      height: 205px;
+      width: 213px;
+    }
+    .content{
+      left: 0px;
+    }
+  }
+  @media screen and (max-width: 560px){
+    .CourseHead{
+      background-position: 70%;
+      padding-top: 70px;
+      height: 550px;
+    }
+    .CourseCard  {
+      height: 220px;
+      width: 230px;
+      top: 30px;
+    }
+    #CourseImage{
+      height: 193px;
+      width: 203px;
+    }
+  }
+
+  @media screen and (max-width: 415px){
+    .CourseHead{
+      background-position: 70%;
+      padding-top: 70px;
+      height: 550px;
+    }
+    .CourseCard {
+      height: 210px;
+      width: 220px;
+      top: 30px;
+    }
+    #CourseImage{
+      height: 183px;
+      width: 193px;
+    }
+  }
+
+  @media screen and (max-width: 383px){
+    .CourseHead{
+      background-position: 70%;
+      padding-top: 70px;
+      height: 550px;
+    }
+    .CourseCard {
+      height: 200px;
+      width: 210px;
+      top: 30px;
+    }
+    #CourseImage{
+      height: 173px;
+      width: 183px;
+    }
+    .content{
+      left: 0px;
+    }
+  }
+
+  @media screen and (max-width: 353px){
+    .CourseHead{
+      background-position: 60%;
+      padding-top: 70px;
+      height: 550px;
+    }
+    .CourseCard{
+      height: 200px;
+      width: 210px;
+      top: 30px;
+    }
+    #CourseImage{
+      height: 173px;
+      width: 183px;
+    }
+  }
+
+
   /* HEADER */
   .header{
     background: url('../images/Hero.jpg'), #0D2C54;
@@ -232,6 +465,7 @@ body
     padding-bottom: 10px;
     font-weight: 400;
   }
+
   /* h4-get started button */
   .header h4{color:black;
     font-size: 18px;
@@ -272,7 +506,6 @@ body
       padding-top: 70px;
     }
   }
-  
   @media screen and (max-width: 560px){
     .header{
       background-position: 100%;
