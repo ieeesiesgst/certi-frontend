@@ -1055,11 +1055,43 @@ background-color: #0c2c53
 
 
 /*Course info page start*/
+#courseinfo
+{
+  width:100%;
+  background-size:contain;
+  background-position: center;
+  background-image: url("../images/Courseinfo_bg.png");
+  background-repeat: no-repeat;
+}
 
+.courseinfo-card-desc
+{
+    display:inline-block;
+    width:1125px;
+    height:400px;
+    background:#fff;
+    box-shadow: 2px 4px 4px rgba(0,0,0,0.25), -1px -1px 4px rgba(0,0,0,0.25);
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 200px;
+}
 
-
-
-
+.courseinfo-card-unit
+{
+    display:inline-block;
+    width:1125px;
+    height:175px;
+    background:#fff;
+    box-shadow: 2px 4px 4px rgba(0,0,0,0.25), -1px -1px 4px rgba(0,0,0,0.25);
+    border-radius: 15px;
+    padding-left:20px;
+    padding-right:20px;
+    overflow: hidden;
+    cursor: pointer;
+}
 
 
 
